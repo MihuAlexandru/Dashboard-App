@@ -1,0 +1,28 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--panel, #31b5a8);
+  border-bottom: 1px solid var(--border, #31b5a8);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.nav__brand {
+  font-weight: 700;
+}
+.nav__links {
+  display: flex;
+  gap: 1rem;
+}
+.nav__links a {
+  color: var(--text, #e8eaf0);
+  text-decoration: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+}
+.nav__links a.active {
+  background: var(--primary, #4f8cff);
+  color: white;
+}

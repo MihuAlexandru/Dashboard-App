@@ -1,0 +1,46 @@
+.card {
+  /* Visuals */
+  background: var(--panel, #fff);
+  color: var(--text, #111);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border, rgba(0, 0, 0, 0.08));
+
+  /* Spacing */
+  padding: 32px;
+
+  /* Let the card size to content by default */
+  display: inline-block; /* shrink-wrap to content width */
+  width: -moz-fit-content; /* Firefox */
+  width: fit-content; /* modern browsers */
+  max-width: 100%; /* avoid overflow on small screens */
+
+  /* Typography fallback */
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Inter,
+    Arial,
+    sans-serif;
+}
+
+.card--center {
+  /* When centering is requested, use a small layout wrapper */
+  text-align: center;
+}
+
+.card__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.card__body {
+  /* If centering is desired with vertical stacking, use flex container inside */
+  display: inline-flex; /* inline so the parent can still shrink-wrap */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
