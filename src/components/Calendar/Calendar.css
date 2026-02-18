@@ -1,0 +1,184 @@
+.cal {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  width: 100%;
+  max-width: 380px;
+  margin: 24px auto;
+  overflow: hidden;
+  color: var(--text);
+}
+
+/* Header */
+
+.cal__header {
+  display: grid;
+  grid-template-columns: 36px 1fr 36px;
+  align-items: center;
+  justify-items: center;
+
+  position: relative;
+  padding: 12px 12px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Month + Year */
+
+.cal__title {
+  grid-column: 2;
+  font-weight: 700;
+  color: var(--text);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.cal__month {
+  margin-right: 4px;
+}
+
+.cal__year {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.cal__nav,
+.cal__nav:hover,
+.cal__nav:active,
+.cal__nav:focus,
+.cal__nav:focus-visible {
+  transform: none; /* important: prevents global translateY(-1px) from moving it */
+}
+
+.cal__nav {
+  /* lock size and center the icon */
+  height: 32px;
+  width: 32px;
+  display: grid;
+  place-items: center;
+
+  /* visual styling */
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
+
+  /* remove any positional transform */
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+
+  /* never animate transform; keep visuals subtle */
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.cal__nav:hover {
+  background: color-mix(in oklab, var(--primary) 12%, transparent);
+  border-color: var(--primary-strong);
+  box-shadow: var(--shadow-soft);
+}
+.cal__nav:active {
+  background: color-mix(in oklab, var(--primary) 18%, transparent);
+}
+
+.cal__nav--prev {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.cal__nav--next {
+  grid-column: 3;
+  justify-self: end;
+}
+
+/* Weekday headers */
+.cal__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  padding: 10px 12px 4px;
+}
+
+.cal__weekday {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent); /* from your theme */
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Calendar Grid */
+.cal__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  padding: 8px 12px 14px;
+}
+
+/* Day cells */
+.cal__cell {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius);
+  display: grid;
+  place-items: center;
+
+  background: var(--panel);
+  border: 1px solid transparent;
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+/* Days inside current month */
+.cal__cell--in {
+  color: var(--text);
+}
+
+.cal__cell--in:hover {
+  background: color-mix(in oklab, var(--primary) 12%, transparent);
+  border-color: var(--primary);
+}
+
+/* Empty or outside-of-month cells */
+.cal__cell--out {
+  background: var(--bg);
+  color: var(--muted);
+  border-color: var(--border);
+  opacity: 0.6;
+}
+
+/* Today highlight */
+.cal__cell--today {
+  background: var(--primary);
+  color: var(--btn-text);
+  border-color: var(--primary-strong);
+  font-weight: 700;
+  box-shadow: inset 0 0 0 2px
+    color-mix(in oklab, var(--primary-strong) 40%, transparent);
+}
+
+/* Day number styling */
+.cal__date {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.cal__nav svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  pointer-events: none;
+}
