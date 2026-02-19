@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import type { UseWeatherParams, UseWeatherState } from "../types/weather";
+import type { UseWeatherParams, UseWeatherState } from "../types/weatherTypes";
 import { fetchWeather, normalizeIcon } from "../services/weatherService";
 
 const CITY_STORAGE_KEY = "weather_city";

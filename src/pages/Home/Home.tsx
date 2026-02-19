@@ -1,7 +1,7 @@
 import Calendar from "../../components/Calendar/Calendar";
 import Card from "../../components/Card/Card";
 import Clock from "../../components/Clock/Clock";
-import Todo from "../../components/ToDo/ToDo";
+import ToDoSection from "../../components/ToDoSection/ToDoSection";
 import Weather from "../../components/Weather/Weather";
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
         <Calendar aria-label="Calendar widget" />
       </Card>
       <Card>
-        <Todo />
+        <ToDoSection />
       </Card>
     </div>
   );

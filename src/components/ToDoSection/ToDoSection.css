@@ -1,0 +1,37 @@
+.todo {
+  padding: 12px;
+  min-width: 1185px;
+  min-height: 400px;
+}
+
+.todo__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.todo__title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.todo__meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.todo__footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.todo__clear:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

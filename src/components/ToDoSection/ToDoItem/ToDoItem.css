@@ -1,0 +1,40 @@
+.todo__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
+.todo__label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.todo__checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-strong);
+  cursor: pointer;
+}
+
+.todo__text {
+  color: var(--text);
+}
+
+.todo__text--done {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.todo__delete {
+  border-radius: 8px;
+  padding: 0.35rem 0.55rem;
+}

@@ -1,4 +1,7 @@
-import type { WeatherAPIResponse, WeatherApiError } from "../types/weather";
+import type {
+  WeatherAPIResponse,
+  WeatherApiError,
+} from "../types/weatherTypes";
 
 export function normalizeIcon(icon?: string): string {
   if (!icon) return "";

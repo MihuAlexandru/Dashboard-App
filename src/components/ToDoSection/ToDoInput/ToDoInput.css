@@ -1,0 +1,18 @@
+.todo__input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.todo__input {
+  flex: 1;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.6em 0.8em;
+}
+
+.todo__add {
+  white-space: nowrap;
+}
