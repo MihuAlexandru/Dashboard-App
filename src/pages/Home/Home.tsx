@@ -3,6 +3,8 @@ import Card from "../../components/Card/Card";
 import Clock from "../../components/Clock/Clock";
 import ToDoSection from "../../components/ToDoSection/ToDoSection";
 import Weather from "../../components/Weather/Weather";
+import { Provider } from "react-redux";
+import { store } from "../../store/store";
 
 export default function Home() {
   return (
@@ -26,7 +28,9 @@ export default function Home() {
         <Calendar aria-label="Calendar widget" />
       </Card>
       <Card>
-        <ToDoSection />
+        <Provider store={store}>
+          <ToDoSection />
+        </Provider>
       </Card>
     </div>
   );

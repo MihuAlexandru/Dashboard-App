@@ -1,15 +1,15 @@
 import { useState } from "react";
 import type { TodoItem } from "../../../types/toDoTypes";
 import "./ToDoInput.css";
+import { useDispatch } from "react-redux";
+import type { AppDispatch } from "../../../store/store";
+import { addItem } from "../../../store/itemsSlice";
 
-export default function ToDoInput({
-  setItems,
-}: {
-  setItems: React.Dispatch<React.SetStateAction<TodoItem[]>>;
-}) {
+export default function ToDoInput() {
   const [input, setInput] = useState("");
+  const dispatch = useDispatch<AppDispatch>();
 
-  function addItem() {
+  function handleAddItem() {
     const text = input.trim();
     if (!text) return;
     const newItem: TodoItem = {
@@ -18,7 +18,7 @@ export default function ToDoInput({
       completed: false,
       createdAt: Date.now(),
     };
-    setItems((prev) => [newItem, ...prev]);
+    dispatch(addItem(newItem));
     setInput("");
   }
 
@@ -31,11 +31,11 @@ export default function ToDoInput({
         placeholder="Add a new task…"
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={(e) => {
-          if (e.key === "Enter") addItem();
+          if (e.key === "Enter") handleAddItem();
         }}
         aria-label="New task"
       />
-      <button className="todo__add btn" type="button" onClick={addItem}>
+      <button className="todo__add btn" type="button" onClick={handleAddItem}>
         Add
       </button>
     </div>

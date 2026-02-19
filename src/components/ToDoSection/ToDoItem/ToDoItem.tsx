@@ -1,22 +1,20 @@
+import { useDispatch } from "react-redux";
 import type { TodoItem } from "../../../types/toDoTypes";
 import "./ToDoItem.css";
+import type { AppDispatch } from "../../../store/store";
+import { removeItem, toggleCompleted } from "../../../store/itemsSlice";
 
-export default function ToDoItem({
-  item,
-  setItems,
-}: {
-  item: TodoItem;
-  setItems: React.Dispatch<React.SetStateAction<TodoItem[]>>;
-}) {
-  function toggleItem(id: string) {
-    setItems((prev) =>
-      prev.map((i) => (i.id === id ? { ...i, completed: !i.completed } : i)),
-    );
+export default function ToDoItem({ item }: { item: TodoItem }) {
+  const dispatch = useDispatch<AppDispatch>();
+
+  function handleToggleItem(id: string) {
+    dispatch(toggleCompleted(id));
   }
 
-  function deleteItem(id: string) {
-    setItems((prev) => prev.filter((i) => i.id !== id));
+  function handleDeleteItem(id: string) {
+    dispatch(removeItem(id));
   }
+
   return (
     <li key={item.id} className="todo__item">
       <label className="todo__label">
@@ -24,7 +22,7 @@ export default function ToDoItem({
           type="checkbox"
           className="todo__checkbox"
           checked={item.completed}
-          onChange={() => toggleItem(item.id)}
+          onChange={() => handleToggleItem(item.id)}
           aria-label={`Mark "${item.text}" as ${
             item.completed ? "incomplete" : "complete"
           }`}
@@ -39,7 +37,7 @@ export default function ToDoItem({
       <button
         className="todo__delete btn-ghost"
         type="button"
-        onClick={() => deleteItem(item.id)}
+        onClick={() => handleDeleteItem(item.id)}
         aria-label={`Delete "${item.text}"`}
         title="Delete"
       >
