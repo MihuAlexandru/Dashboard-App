@@ -1,5 +1,5 @@
 .clock {
-  --size: 200px;
+  --size: 215px;
   --number-translate: translate(calc(var(--size) / 2 - 24px));
 
   width: var(--size);
@@ -77,7 +77,7 @@
 }
 
 .time-text {
-  font-size: 67px;
+  font-size: 35px;
   font-weight: 200;
   font-family: "Inter", ui-monospace, Menlo, Consolas, monospace;
   letter-spacing: -2px;

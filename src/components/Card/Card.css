@@ -1,5 +1,4 @@
 .card {
-  /* Visuals */
   background: var(--panel, #fff);
   color: var(--text, #111);
   border-radius: 24px;
@@ -8,10 +7,11 @@
 
   padding: 32px;
 
-  display: inline-block;
-  width: -moz-fit-content;
-  width: fit-content;
-  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 
   font-family:
     system-ui,
@@ -24,7 +24,6 @@
 }
 
 .card--center {
-  /* When centering is requested, use a small layout wrapper */
   text-align: center;
 }
 
@@ -35,9 +34,20 @@
 }
 
 .card__body {
-  /* If centering is desired with vertical stacking, use flex container inside */
-  display: inline-flex; /* inline so the parent can still shrink-wrap */
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 16px;
+  }
 }
