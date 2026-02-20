@@ -1,0 +1,17 @@
+.gm-poster {
+  flex: 0 0 300px;
+}
+
+.gm-poster img {
+  display: "block";
+  border-radius: 8;
+  object-fit: "cover";
+  width: 900;
+  height: 450;
+}
+
+@media (max-width: 700px) {
+  .gm-poster {
+    align-self: center;
+  }
+}

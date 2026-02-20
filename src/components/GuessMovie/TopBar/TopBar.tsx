@@ -1,4 +1,5 @@
 import type { TopBarProps } from "../../../types/movieGuessTypes";
+import "./TopBar.css";
 
 export default function TopBar({
   phase,
@@ -33,7 +34,7 @@ export default function TopBar({
 
         {phase === "playing" && isAllRevealed && (
           <button
-            className="gm-btn gm-btn-primary"
+            className="gm-btn"
             type="button"
             onClick={onNextMovie}
             title="Fetch another random movie"
@@ -45,7 +46,7 @@ export default function TopBar({
 
         {phase === "won" && (
           <button
-            className="gm-btn gm-btn-primary"
+            className="gm-btn"
             type="button"
             onClick={onPlayAgain}
             disabled={loading}

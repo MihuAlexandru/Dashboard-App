@@ -42,3 +42,9 @@ export type TopBarProps = {
   onNextMovie: () => void;
   onPlayAgain: () => void;
 };
+
+export type RulesProps = {
+  handleStart: () => Promise<void>;
+  loading: boolean;
+  err: string;
+};

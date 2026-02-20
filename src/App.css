@@ -1,5 +1,5 @@
 :root {
-  --radius: 12px;
+  --radius: 20px;
   --shadow-soft: 0 6px 24px rgba(0, 0, 0, 0.06);
   --transition-fast: 180ms ease;
 
@@ -95,7 +95,7 @@ body {
 
 button,
 .btn {
-  border-radius: 999px;
+  border-radius: var(--radius);
   border: 1px solid var(--btn-border);
   padding: 0.7em 1.2em;
   font-size: 1rem;

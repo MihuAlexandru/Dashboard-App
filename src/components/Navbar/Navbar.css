@@ -40,8 +40,13 @@
 }
 
 .nav__links a.active {
-  background: var(--primary, #4f8cff);
-  color: white;
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

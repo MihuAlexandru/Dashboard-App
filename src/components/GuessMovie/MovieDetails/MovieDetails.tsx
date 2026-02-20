@@ -1,4 +1,5 @@
 import type { MovieDetailsProps } from "../../../types/movieGuessTypes";
+import "./MovieDetails.css";
 
 export default function MovieDetails({ movie, hintStep }: MovieDetailsProps) {
   return (
@@ -10,10 +11,7 @@ export default function MovieDetails({ movie, hintStep }: MovieDetailsProps) {
         </span>
       </h3>
 
-      <p
-        className={hintStep < 2 ? "blurred" : ""}
-        style={{ margin: 0, lineHeight: 1.5 }}
-      >
+      <p className={hintStep < 2 ? "gm-description blurred" : "gm-description"}>
         {movie.description}
       </p>
     </div>

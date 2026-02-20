@@ -1,5 +1,5 @@
 import type { MoviePosterProps } from "../../../types/movieGuessTypes";
-
+import "./MoviePoster.css";
 export default function MoviePoster({ movie, blurred }: MoviePosterProps) {
   return (
     <div className="gm-poster">
@@ -9,13 +9,6 @@ export default function MoviePoster({ movie, blurred }: MoviePosterProps) {
         width={300}
         height={450}
         className={blurred ? "blurred" : ""}
-        style={{
-          display: "block",
-          borderRadius: 8,
-          objectFit: "cover",
-          width: 300,
-          height: 450,
-        }}
       />
     </div>
   );

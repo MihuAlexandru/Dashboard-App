@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { GuessFormProps } from "../../../types/movieGuessTypes";
+import "./GuessForm.css";
 
 export default function GuessForm({ disabled, onSubmitGuess }: GuessFormProps) {
   const [value, setValue] = useState("");
@@ -20,11 +21,7 @@ export default function GuessForm({ disabled, onSubmitGuess }: GuessFormProps) {
         disabled={disabled}
         aria-label="Your movie guess"
       />
-      <button
-        className="gm-btn gm-btn-primary"
-        type="submit"
-        disabled={disabled}
-      >
+      <button className="gm-btn" type="submit" disabled={disabled}>
         Guess
       </button>
     </form>

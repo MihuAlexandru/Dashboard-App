@@ -1,9 +1,9 @@
-// src/features/guess-movie/GuessMovie.tsx
 import "./GuessMovie.css";
 import WaitingCard from "../../components/WaitingCard/WaitingCard";
 import TopBar from "../../components/GuessMovie/TopBar/TopBar";
 import MainContent from "../../components/GuessMovie/MainContent/MainContent";
 import { useGuessMovie } from "../../hooks/useGuessMovie";
+import Rules from "../../components/GuessMovie/Rules/Rules";
 
 export default function GuessMovie() {
   const {
@@ -23,18 +23,9 @@ export default function GuessMovie() {
   } = useGuessMovie();
 
   return (
-    <div className="gm-page">
+    <>
       {phase === "idle" && (
-        <div className="gm-center">
-          <button
-            className="gm-btn gm-btn-primary gm-start"
-            onClick={handleStart}
-            disabled={loading}
-          >
-            {loading ? "Loading..." : "Start Game"}
-          </button>
-          {err && <p className="gm-error">Error: {err}</p>}
-        </div>
+        <Rules handleStart={handleStart} loading={loading} err={err} />
       )}
 
       {phase !== "idle" && loading && (
@@ -65,6 +56,6 @@ export default function GuessMovie() {
           feedback={feedback}
         />
       )}
-    </div>
+    </>
   );
 }

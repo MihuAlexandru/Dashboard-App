@@ -1,0 +1,40 @@
+.gm-details-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 450px;
+}
+
+.gm-flex {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.gm-details {
+  flex: 1 1 auto;
+}
+
+.gm-feedback {
+  margin-top: 8px;
+}
+
+.gm-feedback-success {
+  color: #166534;
+}
+
+.gm-feedback-warn {
+  color: #b45309;
+}
+
+@media (max-width: 700px) {
+  .gm-flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gm-details-col {
+    min-height: auto;
+  }
+}

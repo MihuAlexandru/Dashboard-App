@@ -1,77 +1,3 @@
-.gm-toprow {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-
-  background: var(--panel);
-  color: var(--text);
-
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-
-  padding: 8px 12px;
-  margin-bottom: 30px;
-  box-shadow: var(--shadow-soft);
-}
-
-.gm-controls {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.gm-score {
-  font-weight: 700;
-  color: var(--text);
-}
-
-.gm-details-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 450px; /* match poster height */
-}
-
-.gm-guess-form {
-  margin-top: 16px;
-  display: flex;
-  gap: 8px;
-  justify-self: center;
-}
-
-.gm-flex {
-  display: flex;
-  align-items: stretch;
-  gap: 16px;
-  max-width: 980px;
-  margin: 0 auto;
-}
-
-.gm-poster {
-  flex: 0 0 300px;
-}
-
-.gm-details {
-  flex: 1 1 auto;
-}
-
-@media (max-width: 700px) {
-  .gm-flex {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .gm-poster {
-    align-self: center;
-  }
-  .gm-details-col {
-    min-height: auto;
-  }
-}
-
 .gm-btn {
   appearance: none;
   border: 1px solid var(--btn-border);
@@ -82,25 +8,16 @@
   border-radius: var(--radius);
   font-weight: 600;
   cursor: pointer;
-  transition: var(--transition-fast);
-  box-shadow: var(--btn-shadow);
 }
+
 .gm-btn:hover:not(:disabled) {
   background: var(--btn-hover-bg);
   border-color: var(--btn-hover-border);
 }
+
 .gm-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
-}
-
-.gm-btn-primary {
-  background: var(--primary);
-  border-color: var(--primary-strong);
-  color: var(--text);
-}
-.gm-btn-primary:hover:not(:disabled) {
-  background: var(--primary-strong);
 }
 
 .blurred {
@@ -108,9 +25,6 @@
   user-select: none;
 }
 
-.gm-center {
-  min-height: 60vh;
-  display: grid;
-  place-items: center;
-  text-align: center;
+.gm-error {
+  color: crimson;
 }

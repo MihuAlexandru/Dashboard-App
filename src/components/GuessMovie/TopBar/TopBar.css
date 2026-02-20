@@ -1,0 +1,30 @@
+.gm-toprow {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  background: var(--panel);
+  color: var(--text);
+
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+
+  padding: 8px 12px;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow-soft);
+}
+
+.gm-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.gm-score {
+  font-weight: 700;
+  color: var(--text);
+}

@@ -1,0 +1,16 @@
+.gm-title {
+  margin: 0 0 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.gm-year {
+  opacity: 0.8;
+}
+
+.gm-description {
+  margin: 0;
+  line-height: 1.5;
+  text-align: left;
+}

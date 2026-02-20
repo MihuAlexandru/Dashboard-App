@@ -2,6 +2,7 @@ import type { MainContentProps } from "../../../types/movieGuessTypes";
 import GuessForm from "../GuessForm/GuessForm";
 import MovieDetails from "../MovieDetails/MovieDetails";
 import MoviePoster from "../MoviePoster/MoviePoster";
+import "./MainContent.css";
 
 export default function MainContent({
   err,
@@ -13,7 +14,7 @@ export default function MainContent({
   handleSubmitGuess,
 }: MainContentProps) {
   return (
-    <div className="gm-content">
+    <>
       {err && <p className="gm-error">Error: {err}</p>}
 
       {movie && (
@@ -40,6 +41,6 @@ export default function MainContent({
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
