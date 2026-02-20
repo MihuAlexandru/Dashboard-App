@@ -20,7 +20,6 @@ export function useGuessMovie() {
   const isAllRevealed = hintStep >= HINT_MAX;
 
   const fetchMovie = useCallback(async () => {
-    // cancel any in-flight requests
     abortRef.current?.abort();
     const controller = new AbortController();
     abortRef.current = controller;
@@ -86,7 +85,6 @@ export function useGuessMovie() {
 
   const api = useMemo(
     () => ({
-      // state
       movie,
       loading,
       err,
@@ -95,8 +93,6 @@ export function useGuessMovie() {
       feedback,
       phase,
       isAllRevealed,
-
-      // actions
       handleStart,
       handleHint,
       handleSubmitGuess,

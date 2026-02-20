@@ -3,6 +3,7 @@
   top: 0;
   z-index: 2;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
@@ -13,9 +14,12 @@
   border-radius: var(--radius);
   border: 1px solid var(--border);
 
-  padding: 8px 12px;
-  margin-bottom: 30px;
+  padding: 17px 20px;
+  margin: 15px 0;
   box-shadow: var(--shadow-soft);
+
+  max-width: 980px;
+  justify-self: center;
 }
 
 .gm-controls {

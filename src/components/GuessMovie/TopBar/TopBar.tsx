@@ -1,4 +1,5 @@
 import type { TopBarProps } from "../../../types/movieGuessTypes";
+import Card from "../../Card/Card";
 import "./TopBar.css";
 
 export default function TopBar({
@@ -12,7 +13,7 @@ export default function TopBar({
   onPlayAgain,
 }: TopBarProps) {
   return (
-    <div className="gm-toprow">
+    <Card className="gm-toprow">
       <div className="gm-controls">
         <button
           className="gm-btn"
@@ -59,6 +60,6 @@ export default function TopBar({
       <div className="gm-score">
         <strong>Score:</strong> {score}
       </div>
-    </div>
+    </Card>
   );
 }

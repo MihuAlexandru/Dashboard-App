@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import Card from "../Card/Card";
 
 export default function NavBar() {
   return (
-    <nav className="nav">
+    <Card className="nav">
       <div className="nav__brand">Dashboard</div>
       <div className="nav__links">
         <NavLink
@@ -33,6 +34,6 @@ export default function NavBar() {
         </NavLink>
         <ThemeToggle />
       </div>
-    </nav>
+    </Card>
   );
 }

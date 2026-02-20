@@ -32,29 +32,29 @@ export default function GuessMovie() {
         <WaitingCard text="Fetching next movie…" />
       )}
 
-      {phase !== "idle" && (
-        <TopBar
-          phase={phase}
-          isAllRevealed={isAllRevealed}
-          loading={loading}
-          score={score}
-          hasMovie={!!movie}
-          onHint={handleHint}
-          onNextMovie={nextMovie}
-          onPlayAgain={handlePlayAgain}
-        />
-      )}
-
       {phase !== "idle" && movie && (
-        <MainContent
-          phase={phase}
-          err={err}
-          movie={movie}
-          hintStep={hintStep}
-          loading={loading}
-          handleSubmitGuess={handleSubmitGuess}
-          feedback={feedback}
-        />
+        <>
+          <TopBar
+            phase={phase}
+            isAllRevealed={isAllRevealed}
+            loading={loading}
+            score={score}
+            hasMovie={!!movie}
+            onHint={handleHint}
+            onNextMovie={nextMovie}
+            onPlayAgain={handlePlayAgain}
+          />
+
+          <MainContent
+            phase={phase}
+            err={err}
+            movie={movie}
+            hintStep={hintStep}
+            loading={loading}
+            handleSubmitGuess={handleSubmitGuess}
+            feedback={feedback}
+          />
+        </>
       )}
     </>
   );

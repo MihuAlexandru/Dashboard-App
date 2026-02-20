@@ -1,3 +1,4 @@
+import Card from "../Card/Card";
 import "./WaitingCard.css";
 
 export default function WaitingCard({ text }: { text: string }) {
@@ -9,10 +10,10 @@ export default function WaitingCard({ text }: { text: string }) {
       aria-busy="true"
     >
       <div className="wait-scrim" aria-hidden="true" />
-      <div className="wait-box">
+      <Card className="wait-box">
         <div className="wait-spinner" />
         <div className="wait-label">{text}</div>
-      </div>
+      </Card>
     </div>
   );
 }
