@@ -69,23 +69,20 @@
 html,
 body {
   height: 100%;
-  width: 100%;
 }
 
 body {
   min-height: 100vh;
-  margin: 0;
   background: var(--bg);
   color: var(--text);
-  display: flex;
+  display: block;
+  margin: 35px 60px;
   justify-content: center;
 }
 
 .app {
   width: 100%;
   max-width: 100%;
-  margin: 0;
-  padding: 1rem;
   text-align: center;
 }
 

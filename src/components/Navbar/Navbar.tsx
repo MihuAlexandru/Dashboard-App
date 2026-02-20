@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 export default function NavBar() {
   return (
@@ -13,10 +14,10 @@ export default function NavBar() {
           Home
         </NavLink>
         <NavLink
-          to="/game1"
+          to="/guessMovie"
           className={({ isActive }) => (isActive ? "active" : "")}
         >
-          Game1
+          Guess Movie Game
         </NavLink>
         <NavLink
           to="/game2"
@@ -30,6 +31,7 @@ export default function NavBar() {
         >
           Game3
         </NavLink>
+        <ThemeToggle />
       </div>
     </nav>
   );

@@ -21,6 +21,7 @@
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .nav__links a {

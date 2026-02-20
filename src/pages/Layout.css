@@ -1,12 +1,9 @@
 .layout {
-  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .layout--dashboard {
-  max-width: 1400px;
-  margin: 0 auto;
   padding: 0 1rem;
 }
 
@@ -18,7 +15,6 @@
 /* Responsive design for tablet */
 @media (max-width: 1200px) {
   .layout--dashboard {
-    max-width: 1000px;
     padding: 0 0.75rem;
   }
 }

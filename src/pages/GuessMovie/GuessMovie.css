@@ -1,0 +1,13 @@
+.blurred {
+  filter: blur(6px);
+  opacity: 0.85;
+  transition:
+    filter 160ms ease,
+    opacity 160ms ease;
+}
+
+@media (max-width: 640px) {
+  .movieRow {
+    flex-direction: column;
+  }
+}
