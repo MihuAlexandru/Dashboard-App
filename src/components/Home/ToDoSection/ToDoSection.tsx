@@ -3,8 +3,8 @@ import "./ToDoSection.css";
 import ToDoList from "./ToDoList/ToDoList";
 import ToDoInput from "./ToDoInput/ToDoInput";
 import { useDispatch, useSelector } from "react-redux";
-import type { AppDispatch, RootState } from "../../store/store";
-import { clearAll } from "../../store/itemsSlice";
+import type { AppDispatch, RootState } from "../../../store/store";
+import { clearAll } from "../../../store/itemsSlice";
 
 export default function ToDoSection() {
   const dispatch = useDispatch<AppDispatch>();

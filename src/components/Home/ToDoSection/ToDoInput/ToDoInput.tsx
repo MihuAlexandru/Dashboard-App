@@ -1,9 +1,9 @@
 import { useState } from "react";
-import type { TodoItem } from "../../../types/toDoTypes";
+import type { TodoItem } from "../../../../types/toDoTypes";
 import "./ToDoInput.css";
 import { useDispatch } from "react-redux";
-import type { AppDispatch } from "../../../store/store";
-import { addItem } from "../../../store/itemsSlice";
+import type { AppDispatch } from "../../../../store/store";
+import { addItem } from "../../../../store/itemsSlice";
 
 export default function ToDoInput() {
   const [input, setInput] = useState("");

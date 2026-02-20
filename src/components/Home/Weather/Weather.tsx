@@ -1,4 +1,4 @@
-import { useWeather } from "../../hooks/useWeather";
+import { useWeather } from "../../../hooks/useWeather";
 import "./Weather.css";
 
 export default function Weather() {

@@ -1,0 +1,62 @@
+.wait-root {
+  pointer-events: none;
+}
+
+.wait-centered {
+  display: grid;
+  place-items: center;
+  min-height: 40vh;
+}
+
+.wait-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 5; /* above .gm-toprow */
+  display: grid;
+  place-items: center;
+  pointer-events: auto; /* block clicks while loading */
+}
+
+.wait-scrim {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in oklab, var(--bg) 70%, black 30%);
+  opacity: 0.5;
+}
+
+.wait-box {
+  position: relative;
+  z-index: 1;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  box-shadow: var(--shadow-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wait-spinner {
+  --spin-size: 40px;
+  width: var(--spin-size);
+  height: var(--spin-size);
+  min-width: var(--spin-size);
+  min-height: var(--spin-size);
+  border-radius: 50%;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary-strong);
+  animation: wait-spin 800ms linear infinite;
+}
+
+@keyframes wait-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.wait-label {
+  font-weight: 600;
+  color: var(--text);
+}

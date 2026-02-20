@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
-import type { TodoItem } from "../../../types/toDoTypes";
+import type { TodoItem } from "../../../../types/toDoTypes";
 import "./ToDoItem.css";
-import type { AppDispatch } from "../../../store/store";
-import { removeItem, toggleCompleted } from "../../../store/itemsSlice";
+import type { AppDispatch } from "../../../../store/store";
+import { removeItem, toggleCompleted } from "../../../../store/itemsSlice";
 
 export default function ToDoItem({ item }: { item: TodoItem }) {
   const dispatch = useDispatch<AppDispatch>();

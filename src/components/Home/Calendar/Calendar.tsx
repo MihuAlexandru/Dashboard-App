@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { generateCalendar } from "../../services/calendarService";
 import "./Calendar.css";
+import { generateCalendar } from "../../../services/calendarService";
 
 export default function Calendar() {
   const today = new Date();
